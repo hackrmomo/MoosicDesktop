@@ -1,0 +1,55 @@
+{
+  "name": "moosic_desktop",
+  "version": "1.0.0",
+  "private": true,
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "scripts": {
+    "start:web": "react-scripts start",
+    "build:web": "set PUBLIC_URL=./&& react-scripts build",
+    "build:desktop": "tsc -p electron/tsconfig.json",
+    "start:desktop": "npm run build:desktop && electron ./build/electron.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/plugin-syntax-flow": "^7.21.4",
+    "@babel/plugin-transform-react-jsx": "^7.21.0",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@material-ui/core": "^4.12.4",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.11.16",
+    "@mui/styled-engine-sc": "^5.11.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "styled-components": "^5.3.9",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@material-ui/types": "^5.1.0",
+    "@types/node": "^16.18.12",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@types/styled-components": "^5.1.26",
+    "electron": "^23.1.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
